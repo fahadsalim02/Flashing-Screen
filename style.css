@@ -1,0 +1,115 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 90vh;
+    /* margin: 0; */
+    background-attachment: fixed;
+    background-image: linear-gradient(-90deg,rgb(18, 223, 226),rgb(82, 244, 171) );
+    /* background-color: aqua; */
+}
+
+.title{
+    margin-bottom: -10px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 7px rgb(11, 155, 153);
+    color: #ffffff;
+}
+
+.desc{
+    font-size: 1.5em;
+    color: #0c6a8d;
+    /* text-shadow: 1px 1px 7px rgb(2, 112, 110); */
+}
+
+.memorycards{
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-gap:20px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition for background color and border */
+
+
+    &:hover {
+        /* border: solid 1px; */
+        background-color: #ffffff;
+    }
+
+}
+.card.flashed {
+        background-color: #ffffff;
+}
+
+#startButton{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+     font-size: 1.2em;
+    font-weight: 400;
+    color: #ffffff;
+    background-image: linear-gradient(90deg,rgb(18, 223, 226), rgba(22, 164, 177, 0.904) );
+    border-radius: 20px;
+    border-color: rgb(41, 180, 166);
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+#startButton:hover{
+transform: scale(1.2);
+transition: 500ms;
+}
+
+
+.congratulations-popup {
+    position: fixed;
+    /* top: 50%; */
+    /* left: 50%; */    
+    /* transform: translate(-50%, -50%); */
+    padding: 20px;
+    background-image: linear-gradient(rgb(180, 230, 43), rgb(113, 240, 28));
+    border-radius: 8px;
+    text-align: center;
+    font-size: 28px;
+    color: #fffefe;
+    z-index: 1000;
+    animation: zoom-in-zoom-out 1.5s ease infinite;
+    }
+    
+
+  .GameOver-popup {
+    position: fixed;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    padding: 20px;
+    background-image: linear-gradient(rgb(230, 87, 43), rgb(243, 8, 8));
+    border-radius: 8px;
+    text-align: center;
+    font-size: 28px;
+    color: #fffefe;
+    z-index: 1000;
+    animation: zoom-in-zoom-out 1.5s ease infinite;
+
+  }
+
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
